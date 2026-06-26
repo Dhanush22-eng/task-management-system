@@ -1,22 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
+
     <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
 
-<h1>Task Manager</h1>
+    <h1>Task Manager</h1>
+    <div class="search-container">
 
-<input
-    type="text"
-    id="search"
-    placeholder="Search tasks..."
->
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search by title, description, status, priority..."
+    >
+      <select id="sort">
+        <option value="">Sort By</option>
+        <option value="newest">Due Date: Newest First</option>
+        <option value="oldest">Due Date: Oldest First</option>
+        <option value="high">Priority: High → Low</option>
+        <option value="low">Priority: Low → High</option>
+    </select>
 
-<div id="taskList"></div>
 
-<script src="/static/script.js"></script>
+
+</div>
+
+    
+
+  
+    <div id="stats"></div>
+
+    <div id="taskList"></div>
+
+    <script src="/static/script.js"></script>
 
 </body>
+
 </html>
