@@ -42,9 +42,7 @@
             <option>Low</option>
         </select>
 
-        <button id="addBtn">
-            ➕ Add Task
-        </button>
+        <button id="addBtn">➕ Add Task</button>
 
     </div>
 
@@ -54,7 +52,7 @@
         <input
             type="text"
             id="search"
-            placeholder="🔍 Search by title, description, status, priority..."
+            placeholder="🔍 Search (prefix match: dev, app, task...)"
         >
 
         <select id="sort">
@@ -74,6 +72,12 @@
     <div id="taskList"></div>
 
 </div>
+
+<!-- Block past date -->
+<script>
+    let today = new Date().toISOString().split("T")[0];
+    document.getElementById("due_date").setAttribute("min", today);
+</script>
 
 <script src="/static/script.js"></script>
 

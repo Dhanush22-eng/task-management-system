@@ -322,7 +322,7 @@ async function addTask() {
 
         console.error(error);
 
-        alert("❌ Failed to save task.");
+        alert("❌ Failed to save task. Mention the upcoming date ");
 
     }
 
