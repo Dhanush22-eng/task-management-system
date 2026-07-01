@@ -11,35 +11,71 @@
 
 <body>
 
-    <h1>Task Manager</h1>
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>📋 Task Manager</h1>
+        <p>Manage your daily tasks efficiently</p>
+    </div>
+
+    <!-- Add Task Form -->
+    <div class="add-task">
+
+        <input type="text" id="title" placeholder="Title">
+
+        <input type="text" id="description" placeholder="Description">
+
+        <input type="text" id="tags" placeholder="Tags (comma separated)">
+
+        <input type="date" id="due_date">
+
+        <select id="status">
+            <option>Pending</option>
+            <option>In Progress</option>
+            <option>Done</option>
+        </select>
+
+        <select id="priority">
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+        </select>
+
+        <button id="addBtn">
+            ➕ Add Task
+        </button>
+
+    </div>
+
+    <!-- Search & Sort -->
     <div class="search-container">
 
-    <input
-        type="text"
-        id="search"
-        placeholder="🔍 Search by title, description, status, priority..."
-    >
-      <select id="sort">
-        <option value="">Sort By</option>
-        <option value="newest">Due Date: Newest First</option>
-        <option value="oldest">Due Date: Oldest First</option>
-        <option value="high">Priority: High → Low</option>
-        <option value="low">Priority: Low → High</option>
-    </select>
+        <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search by title, description, status, priority..."
+        >
 
+        <select id="sort">
+            <option value="">Sort By</option>
+            <option value="newest">📅 Due Date: Newest First</option>
+            <option value="oldest">📅 Due Date: Oldest First</option>
+            <option value="high">🔴 Priority: High → Low</option>
+            <option value="low">🟢 Priority: Low → High</option>
+        </select>
 
+    </div>
+
+    <!-- Statistics -->
+    <div id="stats" class="stats"></div>
+
+    <!-- Tasks -->
+    <div id="taskList"></div>
 
 </div>
 
-    
-
-  
-    <div id="stats"></div>
-
-    <div id="taskList"></div>
-
-    <script src="/static/script.js"></script>
+<script src="/static/script.js"></script>
 
 </body>
-
 </html>
